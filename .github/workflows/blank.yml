@@ -27,6 +27,9 @@ jobs:
         run: pwd
       - name: print ls
         run: ls -la
+      - uses: actions/checkout@v4
+        with: 
+          fetch-depth: 0
       - name: Run a one-line script
-        run: java -jar ~/ci-cd-check.jar remote
+        run: java -jar ci-cd-check.jar remote
       
